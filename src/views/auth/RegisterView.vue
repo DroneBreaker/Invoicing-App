@@ -1,4 +1,20 @@
 <template>
+  <div>
+    <div class="intro-header">
+      <div class="brand">
+        <img src="#" alt="Logo">
+
+        <!-- <h2>{{ gra }}</h2> -->
+      </div>
+
+
+      <!-- Avatar -->
+      <div class="head-avatar">
+        <!-- Image goes here -->
+        <!-- <img src="#"/> -->
+      </div>
+    </div>
+  
     <div class="login">
       <div class="avatar">
         <!-- Image goes here -->
@@ -14,39 +30,46 @@
             <input type="text" placeholder="Business Tin">
           
           
-          
-            <label for="businessTIN">{{ username }}</label>
-            <input type="text" placeholder="Username">
+            <!-- PIN section -->
+            <label for="pin">{{ piN }}</label>
+            <input type="text" placeholder="Enter 6 digits pin code">
           
 
-          
-            <label for="pin">{{ piN }}</label>
-            <input type="text" placeholder="Password">
+            <!-- Business name -->
+            <label for="businessName">{{ businessName }}</label>
+            <input class="disabledInput" disabled type="text">
+
+
+            <!-- Full Name -->
+            <label for="fullName">{{ fullName }}</label>
+            <input class="disabledInput" disabled type="text">
           </div>
 
-          <div class="login-items">
+          <!-- <div class="login-items">
             <div class="checkbox-group">
               <input type="checkbox">
               <label for="rememberMe">{{ rememberance }}</label>
-            </div>
+            </div> -->
 
             <!-- <router-link to="#"><h2>
               {{ forgotPassword }}
             </h2></router-link> -->
 
-            <h2><router-link to="/">{{ forgotPassword }}</router-link></h2>
-          </div>
+            <!-- <h2><router-link to="/">{{ forgotPassword }}</router-link></h2>
+          </div> -->
 
-          <Button title="Register">Login</Button>
+          <button :type="submit"> {{ title }}</button>
+          <!-- <Button title="Register">Next</Button> -->
 
           <h2 class="company">
-            <router-link to="/">
-              {{ newCompany }}
+            <router-link to="/login">
+              {{ haveAnAccount }}
             </router-link>
             </h2>
         </form>
       </div>
     </div>
+  </div>
 </template>
 
 <script>
@@ -57,13 +80,15 @@ export default {
 
     data() {
         return {
-            title: 'Register',
+            gra: 'GRA',
+            title: 'Next',
             businessTIN: 'Business TIN',
-            username: 'Username',
+            businessName: 'Business Name',
             piN: 'PIN',
+            fullName: 'Full Name',
             rememberance: 'Remember My Login',
             forgotPassword: 'Forgot Password?',
-            newCompany: 'Register New Company?'
+            haveAnAccount: 'Already have an account? Click to Login'
         }
     },
 
@@ -86,10 +111,35 @@ export default {
 </script>
 
 <style scoped>
+.intro-header {
+  display: flex;
+  justify-content: space-between;
+  /* margin-bottom: 5px; */
+}
+
+.brand {
+  margin: 20px 30px;
+  display: flex;
+}
+
+.brand > h2 {
+  margin-left: 10px;
+  color: black;
+  font-size: 30px;
+}
+
+.head-avatar {
+  margin: 25px 30px;
+  height: 60px;
+  width: 60px;
+  background: rgb(39, 99, 178);
+  border-radius: 100%;
+}
+
 .login {
   /* margin-top: 70px; */
-  margin: 60px auto;
-  height: 550px;
+  margin: auto;
+  height: 560px;
   width: 440px;
   background: white;
   color: black;
@@ -99,12 +149,21 @@ export default {
 }
 
 .login > h2 {
-  margin: 30px 190px;
+  margin: 20px 175px;
   font-size: 14px;
   font-weight: 500;
 }
 
 .avatar {
+  /* margin: auto; */
+  /* margin: 25px 30px;
+  height: 60px;
+  width: 60px;
+  background: rgb(39, 99, 178);
+  border-radius: 100%; */
+
+
+
   margin: auto;
   height: 120px;
   width: 120px;
@@ -166,7 +225,7 @@ form {
 }
 
 .company {
-  margin: 15px 100px;
+  margin-left: 125px;
   font-size: 15px;
   font-weight: 400;  
 }
@@ -176,7 +235,17 @@ h2 > router-link {
   /* color: red; */
 }
 
-/* :hover input {
-  border: 1px solid green;
-} */
+.disabledInput {
+  background: rgb(196, 188, 188);
+}
+
+
+button {
+    color: white;
+    background: rgb(62, 111, 132);
+    padding: 5px;
+    width: 98%;
+    height: 40px;
+    border-radius: 5px;
+}
 </style>

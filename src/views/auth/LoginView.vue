@@ -169,12 +169,13 @@ form {
   margin: 15px 100px;
   font-size: 15px;
   font-weight: 400;  
+  /* text-decoration: none; */
 }
 
-h2 > router-link {
-  text-decoration: none;
+/* h2 > .company {
+  text-decoration: none; */
   /* color: red; */
-}
+/* } */
 
 /* :hover input {
   border: 1px solid green;

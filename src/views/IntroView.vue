@@ -32,8 +32,8 @@ export default {
 } */
 
  h1 {
-    font-size: 25px;
-    font-weight: 400;
+    font-size: 30px;
+    font-weight: 500;
     margin-top: 290px;
     margin-bottom: 2px;
   }
@@ -45,13 +45,13 @@ export default {
     margin:30px;
     border-radius: 40px;
     height: 55px;
-    width: 120px;
+    width: 180px;
     color: white;
     cursor: pointer;
   }
 
   .btn {
-    font-size: small;
+    font-size: medium;
     font-weight: 500;
   }
 </style>
