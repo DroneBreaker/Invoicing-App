@@ -81,7 +81,7 @@ export default {
     data() {
         return {
             gra: 'GRA',
-            title: 'Next',
+            title: 'Registration',
             businessTIN: 'Business TIN',
             businessName: 'Business Name',
             piN: 'PIN',
